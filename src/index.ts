@@ -1,2 +1,2 @@
-export { default as useHandler } from './useHandler';
-export { default as useConstant } from './useConstant';
+export { default as useHandler } from 'useConstHandler';
+export { default as useFunction } from 'useFunction';
