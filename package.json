@@ -1,6 +1,6 @@
 {
   "name": "use-constant-handler",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "react hooks useConstant ans useHandler",
   "main": "lib/index.js",
   "module": "es/index.js",
