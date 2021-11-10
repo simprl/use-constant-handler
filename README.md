@@ -10,23 +10,23 @@ React hooks for make constant pointer to function/handler
 import { useConstHandler } from "use-constant-handler";
 
 const Component = ({ onEvent, onInit }) => {
-    // pointer to onInit callback can changed, but pointor to initHandler not change
+    // pointer to onInit callback can changed, but pointor to initHandler don't change
     const onInitHandler = useConstFunc(() => onInit());
     useEffect(() => {
         onInitHandler();
-    }, [onInitHandler]); //call only once becouse initHandler not change
+    }, [onInitHandler]); //it will call only once becouse initHandler don`t change
 
 
     // We do not need redraw input when onEvent callback change.
     // New onEvent callback need only when SubComponent call onEvent.
     // Pointer to onChange callback can changed,
-    // but pointor to onChangeHandler not change
+    // but pointor to onChangeHandler don't change
     const onEventHandler = useConstHandler((e) => onEvent(e))
     return <SubComponent onEvent={onEventHandler}/>;
 }
 ```
 
-### Usage with Typescript
+# Description
 
 ### Source code of useConstFunc:
 ```js
